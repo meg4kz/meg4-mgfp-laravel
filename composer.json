@@ -1,0 +1,29 @@
+{
+  "name": "meg4/mgfp-laravel",
+  "description": "SDK oficial MGFP (MeG4 Federation Protocol) para Laravel: expone tu tienda como un MCP server federado de MEG4 OS (Jarvis).",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["mcp", "mgfp", "meg4", "okastore", "ai", "laravel"],
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^11.0 || ^12.0 || ^13.0",
+    "laravel/mcp": "^1.0",
+    "laravel/sanctum": "^4.0"
+  },
+  "suggest": {
+    "laravel/passport": "Solo si quieres OAuth 2.1 click-to-connect (modo premium) en vez del token por tienda (Sanctum, default)."
+  },
+  "autoload": {
+    "psr-4": {
+      "Meg4\\Mgfp\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Meg4\\Mgfp\\MgfpServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable"
+}
