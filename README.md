@@ -5,15 +5,14 @@ app queda como un **MCP server estándar en `/mcp`** (sirve a cualquier asistent
 y MEG4 le pone encima el gobierno (token por-tienda, permisos, confirmación de
 escrituras).
 
-> **Instalación:** este paquete **no está en Packagist (todavía)**. Se instala
-> desde el **paquete que te entregamos** (un repo git o el `.zip` descomprimido).
+> **Instalación:** este paquete está en un **repo git público** (aún no en Packagist); se instala vía **composer VCS**.
 > *El SDK es opcional: con la spec (PDF) podés construir tu MCP en cualquier lenguaje.*
 
 ## Plug-and-play en 3 pasos
 
 ```bash
 # 1) declarar el paquete entregado (elige UNA) e instalar
-composer config repositories.mgfp vcs https://git.tu-org/meg4-mgfp-laravel.git  # si te damos git
+composer config repositories.mgfp vcs https://github.com/meg4kz/meg4-mgfp-laravel.git  # si te damos git
 # composer config repositories.mgfp path ./meg4-mgfp-laravel                     # si te damos el .zip
 composer require meg4/mgfp-laravel:^1.0 laravel/mcp laravel/sanctum
 php artisan mgfp:install        # publica config/rutas e imprime tu service.json
